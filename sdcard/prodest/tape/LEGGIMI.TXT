@@ -1,0 +1,2 @@
+Mettere qui le cassette in formato WAV (PCM 8 o 16 bit, mono o stereo).
+Dal menu si puo' creare una cassetta vuota per registrare.

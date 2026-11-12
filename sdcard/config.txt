@@ -1,0 +1,14 @@
+# Olivetti Prodest PC1 Emulator - configurazione del firmware Raspberry Pi
+# Raspberry Pi 3 / 3+ / Zero 2 W  -> kernel8-32.img
+# Raspberry Pi 4 / 400            -> kernel7l.img
+
+arm_64bit=0
+disable_overscan=1
+hdmi_force_hotplug=1
+# necessario per l'audio via HDMI (sounddev=sndhdmi in cmdline.txt)
+hdmi_drive=2
+
+[pi4]
+kernel=kernel7l.img
+armstub=armstub7-rpi4.bin
+max_framebuffers=2

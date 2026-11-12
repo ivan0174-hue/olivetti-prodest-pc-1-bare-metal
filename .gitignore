@@ -1,0 +1,9 @@
+*.o
+*.d
+*.elf
+*.lst
+*.map
+pi/*.img
+prodest_host
+sst_test
+circle

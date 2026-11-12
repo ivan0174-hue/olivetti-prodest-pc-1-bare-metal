@@ -1,0 +1,3 @@
+Mettere qui le immagini ROM del BIOS (.BIN / .ROM).
+GLABIOS.ROM: BIOS XT open source (GPLv3) - https://github.com/640-KB/GLaBIOS
+La ROM originale del Prodest PC1 va estratta dalla propria macchina.

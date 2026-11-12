@@ -1,0 +1,18 @@
+# Build di test su Linux:  make -f Makefile.host
+CXX ?= g++
+CXXFLAGS = -O2 -g -Wall -Wextra -Wno-unused-parameter
+CORE = core/cpu.cpp core/machine.cpp core/fdc.cpp core/video.cpp core/hlebios.cpp core/ui.cpp
+
+all: prodest_host sst_test
+
+prodest_host: $(CORE) host/main.cpp core/*.h
+	$(CXX) $(CXXFLAGS) -o $@ $(CORE) host/main.cpp
+
+sst_test: core/cpu.cpp host/sst_test.cpp core/cpu.h
+	$(CXX) $(CXXFLAGS) -o $@ core/cpu.cpp host/sst_test.cpp
+
+core/biosrom.h: core/biosrom.asm
+	python3 tools/mkbiosrom.py
+
+clean:
+	rm -f prodest_host sst_test
