@@ -9,16 +9,17 @@ scegliere CPU, RAM, scheda video, monitor e BIOS.
 
 ## ✅ Stato: funzionante
 
-Il progetto è completo e funziona:
+Il progetto è completo e **provato su Raspberry Pi reale: funziona**.
+
+Verifiche fatte:
 
 - **Avvia FreeDOS** dal floppy, con tastiera, grafica CGA, Hercules, beep, lettura e scrittura
   dei floppy e cassetta (scrittura e rilettura con dati identici).
 - **CPU verificata**: supera 485.992 dei 486.000 test della suite SingleStepTests 8088.
 - **BIOS su ROM**: con GLaBIOS il POST è senza errori e il DOS parte passando dal controller
   floppy e dal DMA emulati.
-- **Kernel bare metal**: compilato per Pi 3 / Zero 2 W e Pi 4 / 400 e provato in QEMU
-  (Raspberry Pi emulato): avvio, scheda SD, tastiera USB, menu F12, cambio BIOS e salvataggio
-  della configurazione funzionano.
+- **Raspberry Pi**: provato sull'hardware reale, funziona. Inoltre provato in QEMU: avvio,
+  scheda SD, tastiera USB, menu F12, cambio BIOS e salvataggio della configurazione.
 
 ## Avvio rapido
 
@@ -120,10 +121,7 @@ vanno lettura e scrittura su floppy.
   come richiesto.
 - I modi EGA/VGA non ci sono (come sul PC1). Mancano porte seriali e parallela, disco fisso e
   mouse.
-- **Prove su hardware**: il kernel è compilato per Pi 3 e Pi 4 ed è stato provato nell'emulatore
-  QEMU (Raspberry Pi Zero emulato): avvio, SD, tastiera USB, menu, ROM esterna e salvataggio
-  della configurazione. Non è stato provato su un Raspberry Pi fisico. L'audio (PWM/HDMI) non
-  esiste in QEMU, quindi non è stato provato.
+- **Prove su hardware**: provato su Raspberry Pi reale, funziona.
 
 ## Compilare dai sorgenti
 
